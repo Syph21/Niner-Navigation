@@ -68,7 +68,7 @@ export default function RootLayout() {
           <Stack.Screen name="index" />
           <Stack.Screen name="login" />
           <Stack.Screen name="(tabs)" />
-          <Stack.Screen name="building-detail" />
+          <Stack.Screen name="building-detail/[buildingId]" />
         </Stack>
       </>
     )
@@ -81,7 +81,7 @@ export default function RootLayout() {
         <Stack.Screen name="index" />
         <Stack.Screen name="login" />
         <Stack.Screen name="(tabs)" />
-        <Stack.Screen name="building-detail" />
+        <Stack.Screen name="building-detail/[buildingId]" />
       </Stack>
     </>
   )
