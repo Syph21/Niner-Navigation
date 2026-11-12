@@ -1,0 +1,1 @@
+export { default, Marker, Polygon } from 'react-native-maps';
