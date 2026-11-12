@@ -9,6 +9,7 @@ const TABS: { name: string; title: string; icon: IconName }[] = [
   { name: 'schedule', title: 'Schedule', icon: 'calendar' },
   { name: 'services', title: 'Services', icon: 'view-grid' },
   { name: 'profile', title: 'Profile', icon: 'account-circle' },
+  { name: 'rides', title: 'Rides', icon: 'car' },
 ]
 
 export default function TabsLayout() {

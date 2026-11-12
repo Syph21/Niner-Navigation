@@ -61,13 +61,12 @@ export default function ProfileScreen() {
     try {
       const { error } = await supabase
         .from('profiles')
-        .insert({
+        .upsert({
           id: user.id,
           accessibility_needs: accessibilityNeeds,
           dark_mode: darkMode,
           units,
         })
-        .upsert()
       if (error) throw error
       Alert.alert('Saved', 'Your settings have been updated')
     } catch (err: unknown) {

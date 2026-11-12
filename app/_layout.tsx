@@ -9,6 +9,7 @@ export default function RootLayout() {
   const router = useRouter()
   const [isReady, setIsReady] = useState(false)
   const [session, setSession] = useState(null)
+  const segments = useSegments()
 
   useEffect(() => {
     ;(async () => {
@@ -39,8 +40,7 @@ export default function RootLayout() {
   useEffect(() => {
     if (!isReady) return
 
-    const currentSegment = useSegments()
-    const segment = Array.isArray(currentSegment) ? currentSegment[0] : currentSegment
+    const segment = Array.isArray(segments) ? segments[0] : segments
 
     if (session) {
       if (segment === 'login') {
@@ -55,7 +55,7 @@ export default function RootLayout() {
         router.replace('/login')
       }
     }
-  }, [isReady, session, router])
+  }, [isReady, session, router, segments])
 
   if (!isReady) {
     return (
